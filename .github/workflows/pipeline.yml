@@ -47,8 +47,6 @@ jobs:
           healthcheck: "https://ramin-pokemon-app-3.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
-      - uses: actions/checkout@v2
-
           
           
         
