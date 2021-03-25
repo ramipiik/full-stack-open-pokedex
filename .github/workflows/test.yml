@@ -26,6 +26,6 @@ jobs:
           SKIP: ${{contains(join(github.event.commits.*.message), '#skip')}}
         run: echo "$SKIP"
       - name: if-lause
-        if: $SKIP == true
+        if: SKIP == true
         run: echo "ehto on tosi"
         
