@@ -1,9 +1,13 @@
 name: Deployment pipeline
 
+# on:
+#   push:
+#     branches:
+#       - dev
+
 on:
-  push:
-    branches:
-      - dev
+  schedule:
+    - cron:  '0 12 * * *'
 
 jobs:
   health_check_job:
@@ -13,7 +17,7 @@ jobs:
         uses: jtalk/url-health-check-action@v1.5
         with:
           # Check the following URLs one by one sequentially
-          url: https://ramin-pokemon-app-3.herokuapp.com/healthhh
+          url: https://ramin-pokemon-app-3.herokuapp.com/health
           # Follow redirects, or just report success on 3xx status codes
           follow-redirect: no # Optional, defaults to "no"
           # Fail this action after this many failed attempts
