@@ -5,7 +5,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 app.use(express.static('dist'))
-console.log('hello world!')
+console.log('hello again world!')
 
 
 
