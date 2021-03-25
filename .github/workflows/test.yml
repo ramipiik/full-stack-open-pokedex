@@ -21,6 +21,6 @@ jobs:
       - name: commit messages 2
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-          JONO: ${{ join(COMMIT_MESSAGES, ',') }}
+          JONO: ${{ join("$COMMIT_MESSAGES") }}
         run: echo "$JONO"
         
