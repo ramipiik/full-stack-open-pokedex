@@ -23,6 +23,6 @@ jobs:
           # COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
           # JONO: ${{ join($COMMIT_MESSAGES) }}
           # JONO: ${{join(github.event.commits.*.message)}} # toimii!
-          SKIP: ${{startsWith(join(github.event.commits.*.message), 'xxx')}}
+          SKIP: ${{startsWith(join(github.event.commits.*.message), '#skip')}}
         run: echo "$SKIP"
         
